@@ -40,7 +40,7 @@ namespace DeploymentToolkit.Debugger
         {
             try
             {
-                Logging.LogManager.Initialize();
+                Logging.LogManager.Initialize("Debugger");
             }
             catch(Exception ex)
             {
