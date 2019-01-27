@@ -57,6 +57,7 @@ namespace DeploymentToolkit.Debugger
                 return;
             }
 
+            // This shouldn't even be neccessary but why not
             var processName = args[0];
             if (processName.ToLower().EndsWith(".exe"))
                 processName = processName.Substring(0, processName.Length - 4);
@@ -82,6 +83,10 @@ namespace DeploymentToolkit.Debugger
                     _logger.Error(ex, $"Error while trying to process [{process.Id}]{process.ProcessName}");
                 }
             }
+
+            // Show information to the user that the execution has been blocked
+            
+
             _logger.Info("Program ended successfully");
         }
     }
